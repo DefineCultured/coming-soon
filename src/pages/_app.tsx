@@ -13,9 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <script async src='https://www.googletagmanager.com/gtag/js?id=G-F6VJZ5H2G5'></script>
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-F6VJZ5H2G5');
-            `
+            __html: `window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-F6VJZ5H2G5');`
           }}
         ></script>
       </Head>

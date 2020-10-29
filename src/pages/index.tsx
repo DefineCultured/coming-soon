@@ -71,9 +71,9 @@ const Home = () => {
     e.preventDefault()
 
     const body = {
-      firstName,
-      lastName,
-      email
+      firstName: firstName.trim(),
+      lastName: lastName.trim(),
+      email: email.trim()
     }
 
     if (formIsValid()) {
