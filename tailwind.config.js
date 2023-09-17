@@ -1,16 +1,6 @@
-// const { colors } = require('tailwindcss/defaultTheme')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true
-  },
-  purge: {
-    enabled: true,
-    content: ['./src/pages/**/*.{js,jsx,ts,tsx}', './src/components/**/*.{js,jsx,ts,tsx}']
-  },
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
@@ -50,7 +40,5 @@ module.exports = {
         NeoGram: ['NeoGram', 'Arial', 'sans-serif']
       }
     }
-  },
-  variants: {},
-  plugins: [require('@tailwindcss/ui')]
+  }
 }

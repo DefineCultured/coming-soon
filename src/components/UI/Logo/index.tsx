@@ -31,9 +31,7 @@ const Logo = ({ size, href, as, ...rest }: LogoProps) => {
     <>
       {href ? (
         <Link href={href} as={as}>
-          <a>
-            <MyLogo />
-          </a>
+          <MyLogo />
         </Link>
       ) : (
         <MyLogo />

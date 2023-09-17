@@ -1,26 +1,27 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face { 
-  font-family: 'NetLuloW01OneBold'; 
-  src: url('/fonts/Net-Lulo-W01-One-Bold.ttf'); 
+@font-face {
+  font-family: 'NetLuloW01OneBold';
+  src: url('/fonts/Net-Lulo-W01-One-Bold.ttf');
 }
 
-@font-face { 
-  font-family: 'Inter'; 
-  src: url('/fonts/Inter.ttf'); 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf');
 }
 
-@font-face { 
-  font-family: 'NeoGram'; 
-  src: url('/fonts/NeoGram-W00-Black.ttf'); 
+@font-face {
+  font-family: 'NeoGram';
+  src: url('/fonts/NeoGram-W00-Black.ttf');
 }
-
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'); */
-/* font-family: 'Montserrat', sans-serif; */
-/* font-family: 'NetLuloW01OneBold', sans-serif; */
 
 html, body, #__next {
-  @apply min-h-screen font-light text-gray-200 bg-vn-black-two;
+  min-height: 100vh;
+  font-weight: 300;
+  background-color: #101010;
+  color: #e5e7eb;
   font-family: 'Inter', sans-serif;
 }
 
@@ -39,6 +40,3 @@ html, body, #__next {
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
-
-@tailwind components;
-@tailwind utilities;

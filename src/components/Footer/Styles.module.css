@@ -1,4 +1,0 @@
-.footer {
-  @apply flex flex-col items-center justify-center w-full mt-8 text-sm border-t border-solid border-vn-black-mid;
-  height: 100px;
-}

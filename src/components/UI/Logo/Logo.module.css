@@ -1,9 +1,13 @@
 .logo {
   font-family: 'NeoGram', sans-serif;
-  @apply flex flex-col tracking-wide uppercase select-none;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  user-select: none;
 }
 
-/* .sizeSmall {
+.sizeSmall {
   font-size: 1.125rem;
   line-height: 1.05rem;
 }
@@ -21,7 +25,7 @@
 .sizeXLarge {
   font-size: 3rem;
   line-height: 2.5rem;
-} */
+}
 
 .size2XLarge {
   font-size: 5rem;

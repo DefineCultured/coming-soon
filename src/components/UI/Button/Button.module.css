@@ -1,97 +1,57 @@
 .fw {
-  @apply block w-full text-center;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .btn {
-  @apply relative inline-block w-full px-10 py-2 text-white no-underline rounded cursor-pointer select-none z-1;
-  -webkit-backface-visibility: hidden;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 2.5rem;
+  color: white;
+  text-decoration-line: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+  backface-visibility: hidden;
 }
 .btn:active {
-  @apply transition-transform duration-100 ease-in-out transform outline-none;
-  --transform-translate-y: 0.1rem;
+  transition-property: transform;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .btn:focus {
-  @apply outline-none;
-}
-
-/*** BLUE BUTTONS ***/
-/* normal */
-.blueNormal {
-  @apply shadow bg-gradient-to-r from-vn-blue-one to-vn-blue-two;
-}
-.blueNormal:after {
-  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out shadow-md opacity-0 z-2 bg-gradient-to-r from-vn-blue-mid to-vn-blue-two;
-  content: '';
+  outline: none;
 }
 
 /* glow */
 .blueGlow {
-  @apply bg-gradient-to-r from-vn-blue-one to-vn-blue-two;
+  background-image: linear-gradient(to right, #8BCDFF, #6888F3);
   box-shadow: 0 8px 20px rgba(108, 157, 243, 0.2);
 }
 .blueGlow:after {
-  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out opacity-0 z-2 bg-gradient-to-r from-vn-blue-mid to-vn-blue-two;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
+  z-index: 2;
+  background-image: linear-gradient(to right, #78AAFF, #6888F3);
   content: '';
   box-shadow: 0 8px 20px rgba(108, 157, 243, 0.2);
 }
 
-/*** RED BUTTONS ***/
-/* normal */
-.redNormal {
-  @apply shadow bg-gradient-to-r from-vn-red-one to-vn-red-two;
-}
-.redNormal:after {
-  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out shadow-md opacity-0 z-2 bg-gradient-to-r from-vn-red-mid to-vn-red-two;
-  content: '';
-}
-
-/* glow */
-.redGlow {
-  @apply bg-gradient-to-r from-vn-red-one to-vn-red-two;
-  box-shadow: 0 8px 20px rgba(212, 113, 113, 0.2);
-}
-.redGlow:after {
-  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out opacity-0 z-2 bg-gradient-to-r from-vn-red-mid to-vn-red-two;
-  content: '';
-  box-shadow: 0 8px 20px rgba(212, 113, 113, 0.2);
-}
-
-/*** BLACK BUTTONS ***/
-/* normal */
-.blackNormal {
-  @apply shadow bg-gradient-to-r from-vn-black-one to-vn-black-two z-1;
-}
-.blackNormal:after {
-  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out shadow-md opacity-0 z-2 bg-gradient-to-r from-vn-black-mid to-vn-black-two;
-  content: '';
-}
-
-/* glow */
-.blackGlow {
-  @apply bg-gradient-to-r from-vn-black-one to-vn-black-two z-1;
-  box-shadow: 0 8px 20px rgba(30, 30, 30, 0.2);
-}
-.blackGlow:after {
-  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out opacity-0 z-2 bg-gradient-to-r from-vn-black-mid to-vn-black-two;
-  content: '';
-  box-shadow: 0 8px 20px rgba(30, 30, 30, 0.2);
-}
-
-
 /** ALL **/
-.blueNormal:hover:after,
-.blueGlow:hover:after,
-.redNormal:hover:after,
-.redGlow:hover:after,
-.blackNormal:hover:after,
-.blackGlow:hover:after {
-  @apply rounded opacity-100;
+.blueGlow:hover:after {
+  border-radius: 0.25rem;
+  opacity: 1;
 }
-.blueNormal span,
-.blueGlow span,
-.redNormal span,
-.redGlow span,
-.blackNormal span,
-.blackGlow span {
-  @apply relative z-3;
+.blueGlow span {
+  position: relative;
+  z-index: 3;
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import styles from './Button.module.css'
 
-const { btn, redNormal, blackNormal, blueNormal, redGlow, blackGlow, blueGlow, fw } = styles
+const { btn, blueGlow, fw } = styles
 
 interface ButtonProps {
   children: ReactNode
@@ -17,11 +17,6 @@ interface ButtonProps {
 
 const Button = ({ children, variant, glow, fullWidth, href, as, type = 'submit', ...rest }: ButtonProps) => {
   const classes = clsx(btn, {
-    [redNormal]: !glow && variant === 'red',
-    [blackNormal]: !glow && variant === 'black',
-    [blueNormal]: !glow && variant === 'blue',
-    [redGlow]: glow && variant === 'red',
-    [blackGlow]: glow && variant === 'black',
     [blueGlow]: glow && variant === 'blue',
     [fw]: fullWidth,
   })
@@ -36,9 +31,7 @@ const Button = ({ children, variant, glow, fullWidth, href, as, type = 'submit',
     <>
       {href ? (
         <Link href={href} as={as}>
-          <a>
-            <MyButton />
-          </a>
+          <MyButton />
         </Link>
       ) : (
         <MyButton />
